@@ -3,7 +3,7 @@ HDL-L is the local version of high-definition likelihood (HDL) (https://github.c
 Traditional global approaches focus on the average genetic correlation across the entire genome, potentially missing localized genetic signals or those with opposite directions at different loci. We have introduced a full likelihood-based method, HDL-L, to estimate local genetic correlations with high efficiency.
 
 ## Installation 
-HDL-L can be easily installed from GitHub using the `remotes` package. If you don't already have remotes installed, the following commands will manage the installation for you:
+HDL-L can be easily installed from GitHub using the `remotes` package. If you don't already have `remotes` installed, the following commands will manage the installation for you:
 ```R
 if (!requireNamespace("remotes", quietly = TRUE))
     install.packages("remotes")
