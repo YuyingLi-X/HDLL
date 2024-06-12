@@ -30,7 +30,7 @@
 #' \item{Trait1 }{The name of trait 1.}
 #' \item{Trait2 }{The name of trait 2.}
 #' \item{chr }{Which chromosome.}
-#' \item{piece }{which piece of the chromosome}
+#' \item{piece }{which piece of the chromosome.}
 #' \item{estimates.df }{A detailed matrix includes the estimates, P-value or likelihood-based intervals of heritability, genetic covariance and genetic correlation.}
 #' \item{eigen.use }{The eigen.cut used in computation.}
 #' }
@@ -42,8 +42,22 @@
 #' 
 #' @seealso 
 #' HDL tutorial: https://github.com/YuyingLi-X/HDL-L
+#' @examples
+#'\dontrun{
+#' ## The GWAS summary statistics for birth weight
+#' data(gwas1.example)
+#'
+#' ## The GWAS summary statistics for type 2 diabetes
+#' data(gwas2.example)
+#'
+#' ## The path to the directory where linkage disequilibrium (LD) information is stored.
+#' LD.path <- "/Path/to/LD/LD.path/"
+#' bim.path <– "/Path/to/bim/bim.path/"
+#' res.HDL <- HDL.L(gwas1.example, gwas2.example, Trait1name = "Basal metabolic rate",  Trait2name = "Standing height" , LD.path = LD.path, bim.path = bim.path, chr=1, piece=3, N0=0)
+#' res.HDL
+#' }
+#' @import dplyr
 #' @export
-#' 
 
 
 HDL.L <-function(gwas1.df, gwas2.df, Trait1name, Trait2name, LD.path, bim.path, Nref = 335272, N0, output.file = "", eigen.cut = 0.95, intercept.output = FALSE, fill.missing.N = NULL, lim = exp(-18), chr, piece){
