@@ -23,7 +23,7 @@ In the "LD.path", it includes
 
 In the "bim.path", it includes all bim files for local regions, which helps to clean the summary statistics data and check if there are multiallelic or duplicated SNPs
 
-### A quick started
+### A quick start
 Below is a quick example to demonstrate how to use HDL-L with genetic data.
 ```R
 # Load example GWAS summary statistics for basal metabolic rate
